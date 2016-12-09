@@ -2,7 +2,7 @@ var country;
 	var $main = $('#main');
 
   $.ajax({
-  	url: "https://cors-anywhere.herokuapp.com/http://ip-api.com/json",
+  	url: "http://ip-api.com/json",
   	dataType: 'json',
   	method: 'GET',
 	}).done(function(loc) {
