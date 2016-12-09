@@ -3,24 +3,20 @@ $(document).ready(function() {
 	var country;
 	var $main = $('#main');
 
-  jQuery.ajaxPrefilter(function(options) {
-    if (options.crossDomain && jQuery.support.cors) {
-        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-    }
 });
 
   $.ajax({
-  	options.url: "https://cors-anywhere.herokuapp.com/http://ip-api.com/json",
+  	url: "https://cors-anywhere.herokuapp.com/http://ip-api.com/json",
   	dataType: 'json',
   	method: 'GET',
 	}).done(function(loc) {
     var city = loc.city;
     var data = loc.countryCode;
-    var options.url = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
-    var options.forcastUrl = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
+    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
+    var forcastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
 
    $.ajax({
-     url: options.url,
+     url: url,
      dataType: 'jsonp',
      method: 'GET',
    }).done(function(data) {
