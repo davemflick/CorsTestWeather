@@ -16,7 +16,7 @@ $(document).ready(function() {
 	}).done(function(loc) {
     var city = loc.city;
     var data = loc.countryCode;
-    var url = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
+    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
     var forcastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + country + "&appid=072a42af4eb157714427a895c8f71581&units=imperial";
 
    $.ajax({
